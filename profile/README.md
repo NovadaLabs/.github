@@ -1,3 +1,12 @@
+<!-- agent-metadata
+name: NovadaLabs
+primary-package: novada-mcp
+install: npx -y novada-mcp
+env-required: NOVADA_API_KEY
+tools: novada_search, novada_research, novada_verify, novada_extract, novada_scrape, novada_crawl, novada_map, novada_discover, novada_monitor, novada_ai_monitor, novada_unblock, novada_browser, novada_browser_flow, novada_proxy, novada_wallet_balance, novada_account_summary, novada_health
+categories: mcp-server, web-scraping, search, proxy, browser-automation
+-->
+
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NovadaLabs/.github/main/profile/logo-dark.png">
@@ -27,17 +36,70 @@
   <a href="https://x.com/Novada_Proxy"><img src="https://img.shields.io/twitter/follow/Novada_Proxy?style=social" alt="Follow on X"></a>
 </div>
 
-## What Novada does
+## Quick Start
 
-| Capability | What your agent can do |
+**One API key unlocks everything** — search, scrape, proxy, browser, monitor, and AI brand tracking.
+
+**1. Get your API key** at [novada.com](https://www.novada.com) — copy your `NOVADA_API_KEY` from the dashboard.
+
+**2. Add to your MCP client:**
+
+**Claude Code** (one command):
+```bash
+claude mcp add novada -e NOVADA_API_KEY=your_key -- npx -y novada-mcp
+```
+
+**Claude Desktop · Cursor · VS Code · Windsurf** — paste into your MCP config:
+```json
+{
+  "mcpServers": {
+    "novada": {
+      "command": "npx",
+      "args": ["-y", "novada-mcp"],
+      "env": { "NOVADA_API_KEY": "your_key" }
+    }
+  }
+}
+```
+
+**3. Try it:**
+```
+novada_search({query: "latest AI news", num: 5})
+novada_extract({url: "https://example.com"})
+novada_research({question: "what is Novada?", depth: "deep"})
+```
+
+## Tools
+
+| Tool | What it does |
 | --- | --- |
-| **Search & research** | Search across 5 engines, run cited multi-source research, and fact-check claims. |
-| **Extract & scrape** | Any URL → clean Markdown or JSON. 129 structured platforms (Amazon, LinkedIn, TikTok, YouTube…). Batch and async jobs. |
-| **Crawl & map** | Walk a whole site, discover its structure, and build a corpus. |
-| **Monitor** | Detect when a page changes (field-level diffs) — and how AI models describe your brand. |
-| **Proxy network** | Residential, ISP, datacenter, mobile, static & dedicated IPs — 100M+ pool, 195 countries. |
-| **Unblock & browse** | Anti-bot bypass, JS rendering, geo-routing, and a session-persistent cloud browser. |
-| **Account & ops** | Wallet, usage, and per-product balances — agents can watch their own spend. |
+| **Search & research** | |
+| `novada_search` | Query across 5 engines, return ranked results. |
+| `novada_research` | Multi-source cited research on any topic. |
+| `novada_verify` | Fact-check a claim against live sources. |
+| **Extract & scrape** | |
+| `novada_extract` | Any URL → clean Markdown or structured JSON. |
+| `novada_scrape` | 129 structured platforms (Amazon, LinkedIn, YouTube…). |
+| `novada_scraper_submit` | Submit a batch scrape job asynchronously. |
+| `novada_scraper_status` | Poll status of a submitted scrape job. |
+| `novada_scraper_result` | Fetch results of a completed scrape job. |
+| **Crawl & map** | |
+| `novada_crawl` | Walk an entire site, collect every page. |
+| `novada_map` | Return site structure as a URL tree. |
+| `novada_discover` | Find URLs matching a pattern or topic. |
+| **Monitor** | |
+| `novada_monitor` | Detect field-level changes on any page. |
+| `novada_ai_monitor` | Track how AI models describe a brand or topic. |
+| **Unblock & browse** | |
+| `novada_unblock` | Anti-bot bypass with JS rendering and geo-routing. |
+| `novada_browser` | Session-persistent cloud browser, single action. |
+| `novada_browser_flow` | Multi-step browser automation as a flow. |
+| **Proxy** | |
+| `novada_proxy` | Residential, ISP, datacenter, mobile, static, dedicated — 100M+ IPs, 195 countries. |
+| **Account & ops** | |
+| `novada_wallet_balance` | Current wallet credit balance. |
+| `novada_account_summary` | Usage and per-product spend summary. |
+| `novada_health` | Live API and service health status. |
 
 One API key. One output format. One vendor for the whole web-data surface.
 
@@ -48,6 +110,16 @@ One API key. One output format. One vendor for the whole web-data surface.
 - **We own the network.** 100M+ residential IPs across 195 countries, built and run by us — higher success rates, lower cost, no reseller markup.
 - **Sees what others miss.** Detect when a page changes, and track how AI models — ChatGPT, Perplexity, Claude, Gemini, Grok — describe your brand.
 - **In service of the business.** The point isn't the tools — it's the people behind the agents shipping faster and making better calls. Novada handles the web busywork so they don't have to.
+
+## Which package?
+
+| If you need… | Install |
+| --- | --- |
+| Everything (recommended) | `npx novada-mcp` |
+| Search, scrape, crawl, research only | `npx novada-search` |
+| Proxy credentials inside your agent only | `npx novada-proxy-mcp` |
+
+Not sure? Use `novada-mcp` — it includes all tools and uses the same single API key.
 
 ## Access layers
 
