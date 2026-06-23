@@ -1,5 +1,8 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/NovadaLabs/.github/main/profile/logo.png" alt="Novada" height="56">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NovadaLabs/.github/main/profile/logo-dark.png">
+    <img src="https://raw.githubusercontent.com/NovadaLabs/.github/main/profile/logo-light.png" alt="Novada" height="48">
+  </picture>
 
   <h3>Agent-first web data infrastructure</h3>
   <p>One MCP server for everything an AI agent needs from the web — search, scrape, crawl, proxy, monitor, and more.<br>
@@ -97,7 +100,9 @@ First-party clients, maintained by Novada.
 - **[novada-scraper-skill](https://github.com/NovadaLabs/novada-scraper-skill)** — agent skill: turn any website into structured data.
 - **[novada-webunblocker-skill](https://github.com/NovadaLabs/novada-webunblocker-skill)** — agent skill: reach sites that fight back.
 
-_Coming soon: LangChain · CrewAI · n8n · Zapier._
+_Coming soon: LangChain · CrewAI · n8n · Zapier — and more._
+
+**Building with Novada?** We're happy to integrate with any agent framework, MCP client, or automation platform — if you're building it, we want to support it. [Open an issue](https://github.com/NovadaLabs/novada-mcp/issues) or reach us at [novada.com](https://www.novada.com).
 
 ## Connect
 
