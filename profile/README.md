@@ -300,7 +300,7 @@ Full integration guides at **[developer.novada.com](https://developer.novada.com
 
 | If you need… | Use |
 | --- | --- |
-| Everything — zero install, hosted | `https://mcp.novada.com/your_key/mcp` |
+| Everything — zero install, hosted | `https://mcp.novada.com/mcp?token=your_key` |
 | Everything — local, all 23 tools + browser | `npx novada-mcp` |
 | Search, scrape, crawl, research only | `npx novada-search` |
 | Proxy credentials only | `npx novada-proxy-mcp` |
