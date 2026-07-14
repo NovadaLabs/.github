@@ -197,15 +197,20 @@ Get your key at [novada.com](https://www.novada.com) — free tier, no credit ca
 ```json
 {
   "mcpServers": {
-    "novada": { "url": "https://mcp.novada.com/your_key/mcp" }
+    "novada": { "url": "https://mcp.novada.com/mcp?token=your_key" }
   }
 }
 ```
 
 ```bash
 # Claude Code
-claude mcp add --transport http novada https://mcp.novada.com/your_key/mcp
+claude mcp add --transport http novada "https://mcp.novada.com/mcp?token=your_key"
+
+# Or keep your key out of the URL with a Bearer header:
+claude mcp add --transport http novada https://mcp.novada.com/mcp --header "Authorization: Bearer your_key"
 ```
+
+<sub>Path style <code>https://mcp.novada.com/&lt;your_key&gt;/mcp</code> also works.</sub>
 
 **Option B — Local npm (all 23 tools, including browser automation):**
 
@@ -313,7 +318,7 @@ Novada is a hosted platform — start at **[novada.com](https://www.novada.com)*
 Paste one URL. Always up to date — tools update server-side, no client redeploy needed.
 
 ```
-https://mcp.novada.com/your_key/mcp
+https://mcp.novada.com/mcp?token=your_key
 ```
 <br clear="right"/>
 
